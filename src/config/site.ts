@@ -23,16 +23,16 @@ export const SITE = {
     'https://formspree.io/f/your_form_id',
 
   // Cash App $cashtag
-  cashApp: env.VITE_CASHAPP || env.NEXT_PUBLIC_CASHAPP || '$YourCashTag',
+  cashApp: env.VITE_CASHAPP || env.NEXT_PUBLIC_CASHAPP || '$Jfern3000',
 
   // Bitcoin wallet address
   btcAddress:
     env.VITE_BTC_ADDRESS ||
     env.NEXT_PUBLIC_BTC_ADDRESS ||
-    'YOUR_BTC_WALLET_ADDRESS',
+    'bc1q085nuvlzmvlrpz5yzv9xvyazxepvfyrnss7fg3',
 
   // WhatsApp number in international format, digits only (e.g. 14155551234)
-  whatsapp: env.VITE_WHATSAPP || env.NEXT_PUBLIC_WHATSAPP || '10000000000',
+  whatsapp: env.VITE_WHATSAPP || env.NEXT_PUBLIC_WHATSAPP || '+14155984726',
 };
 
 export const whatsappLink = (message?: string) => {
