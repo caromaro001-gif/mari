@@ -66,7 +66,7 @@ const Payment: React.FC = () => {
                 Send the exact plan amount to our Cash App tag.
               </p>
               <div className="mt-5">
-                <CopyField label="$Jfern3000" value={SITE.cashApp} />
+                <CopyField label="Cashapp" value={SITE.cashApp} />
               </div>
             </div>
           </ScrollReveal>
@@ -83,7 +83,7 @@ const Payment: React.FC = () => {
                 Send the equivalent BTC to our wallet address.
               </p>
               <div className="mt-5">
-                <CopyField label="bc1q085nuvlzmvlrpz5yzv9xvyazxepvfyrnss7fg3" value={SITE.btcAddress} />
+                <CopyField label="BTC" value={SITE.btcAddress} />
               </div>
             </div>
           </ScrollReveal>
