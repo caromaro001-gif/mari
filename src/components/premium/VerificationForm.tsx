@@ -57,23 +57,35 @@ const VerificationForm: React.FC<VerificationFormProps> = ({
 
     await subscribeToCrm(email, name, phone, smsOptIn);
 
-    try {
-      const res = await fetch(SITE.formspreeEndpoint, {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: fd,
-      });
-      if (res.ok) {
-        setDone(true);
-        form.reset();
-      } else {
-        setError('Something went wrong. Please try again or contact support.');
-      }
-    } catch {
-      setError('Network error. Please check your connection and try again.');
-    } finally {
-      setLoading(false);
-    }
+   try {
+  const res = await fetch(SITE.formspreeEndpoint, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+    },
+    body: fd,
+  });
+
+  const responseText = await res.text();
+
+  console.log('Formspree Endpoint:', SITE.formspreeEndpoint);
+  console.log('Formspree Status:', res.status);
+  console.log('Formspree Response:', responseText);
+
+  if (res.ok) {
+    setDone(true);
+    form.reset();
+  } else {
+    setError(
+      `Submission failed (${res.status}). Check the browser console for details.`
+    );
+  }
+} catch (err) {
+  console.error('Network Error:', err);
+  setError('Network error. Please check your connection and try again.');
+} finally {
+  setLoading(false);
+}
   };
 
   if (done) {
