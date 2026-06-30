@@ -70,7 +70,7 @@ export interface Plan {
 export const PLANS: Plan[] = [
   {
     name: 'Monthly Access',
-    price: 25,
+    price: 100,
     cadence: '/ month',
     perks: [
       'Full premium gallery access',
@@ -81,7 +81,7 @@ export const PLANS: Plan[] = [
   },
   {
     name: 'VIP Access',
-    price: 50,
+    price: 200,
     cadence: '/ month',
     popular: true,
     perks: [
@@ -94,7 +94,7 @@ export const PLANS: Plan[] = [
   },
   {
     name: 'Lifetime Premium',
-    price: 150,
+    price: 500,
     cadence: 'one-time',
     perks: [
       'Lifetime full access',
